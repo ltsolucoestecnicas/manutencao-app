@@ -1,0 +1,59 @@
+/* Tokens de design. O painel Aparência (no-code) vai alterar --brand-*. */
+:root {
+  --brand-500: #0b5fff;
+  --brand-600: #0848c4;
+  --brand-50: #eaf1ff;
+  --on-brand: #ffffff;
+  --accent-500: #f59e0b;
+
+  --bg: #ffffff;
+  --surface: #f6f7f9;
+  --surface-2: #eceef2;
+  --text: #14171f;
+  --text-muted: #4a5163;
+  --border: #d5d9e2;
+
+  --success: #14783c;
+  --warning: #8a5a00;
+  --danger: #b3261e;
+
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --fs-sm: 0.9375rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: clamp(1.5rem, 1.2rem + 1.5vw, 2rem);
+  --fs-2xl: clamp(1.875rem, 1.4rem + 2.4vw, 2.75rem);
+
+  --sp-1: 0.25rem; --sp-2: 0.5rem; --sp-3: 0.75rem; --sp-4: 1rem;
+  --sp-5: 1.5rem; --sp-6: 2rem; --sp-7: 3rem;
+
+  --radius-sm: 8px; --radius-md: 12px; --radius-lg: 20px; --radius-full: 999px;
+  --shadow-1: 0 1px 2px rgb(0 0 0 / 0.08);
+  --shadow-2: 0 6px 20px rgb(0 0 0 / 0.12);
+
+  --tap: 44px;
+  --dur: 200ms;
+  --focus: 0 0 0 3px var(--bg), 0 0 0 5px var(--brand-600);
+  --safe-b: env(safe-area-inset-bottom, 0px);
+  --safe-t: env(safe-area-inset-top, 0px);
+  --nav-h: 64px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e1117; --surface: #171b24; --surface-2: #212733;
+    --text: #f2f4f8; --text-muted: #b4bbcb; --border: #343b4b;
+    --brand-500: #6ea2ff; --brand-600: #8db7ff; --on-brand: #0e1117;
+    --success: #5fd18a; --warning: #f0b84a; --danger: #ff8a80;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e1117; --surface: #171b24; --surface-2: #212733;
+  --text: #f2f4f8; --text-muted: #b4bbcb; --border: #343b4b;
+  --brand-500: #6ea2ff; --brand-600: #8db7ff; --on-brand: #0e1117;
+  --success: #5fd18a; --warning: #f0b84a; --danger: #ff8a80;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --dur: 0ms; }
+}
